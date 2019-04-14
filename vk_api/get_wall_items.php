@@ -1,3 +1,9 @@
 <?php 
 	
-	echo 'custom_var_dump';
+class v_vk_wall 
+{
+	public static get($obj)
+	{
+		return 'yes';
+	}
+}
