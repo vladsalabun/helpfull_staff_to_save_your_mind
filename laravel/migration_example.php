@@ -2,13 +2,13 @@
 
     Schema::create('table', function (Blueprint $table) {
         $table->increments('id');
-        $table->string('field')->nullable;
+        $table->string('field')->nullable();
         $table->integer('field')->default(0); 
     });
     
     Schema::table('table', function($table)
     {
-        $table->string('field')->nullable;
+        $table->string('field')->nullable();
         $table->integer('field')->default(0); 
         $table->float('field');
         $table->decimal('field', 5, 2);
