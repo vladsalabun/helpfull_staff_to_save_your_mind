@@ -29,6 +29,11 @@
             $fd = fopen($file, 'w') or die("не удалось создать файл");
             fwrite($fd, $content);
             fclose($fd);
+        } else if($write == 'append') {
+            // Дописать в начало файла:
+            $new_content = $content . PHP_EOL;
+            $new_content .= file_get_contents($file); 
+            file_put_contents($file, $new_content);
         }
         
         return true;
