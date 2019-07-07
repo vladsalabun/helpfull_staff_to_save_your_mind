@@ -6,8 +6,9 @@
         type: 'post',
         url: '{{URL::to('/')}}/hr',
         data: $('#changePoint').serialize(),
+        //data: $('#changePoint').serialize() + '&action=test_ajax',
     })
-    .done (function () {
+    .done (function (data) {
         // console.log('form was submitted');
     })
     .fail (function () {
